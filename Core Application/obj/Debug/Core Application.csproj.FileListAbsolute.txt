@@ -1,0 +1,15 @@
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core_Application.Properties.Resources.resources
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.csproj.GenerateResource.Cache
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core_Application.Core.resources
+D:\Desktop Programming\Core Application\Core Application\bin\Debug\Guna.UI2.dll
+D:\Desktop Programming\Core Application\Core Application\bin\Debug\Core Application.exe.config
+D:\Desktop Programming\Core Application\Core Application\bin\Debug\Core Application.exe.manifest
+D:\Desktop Programming\Core Application\Core Application\bin\Debug\Core Application.application
+D:\Desktop Programming\Core Application\Core Application\bin\Debug\Core Application.exe
+D:\Desktop Programming\Core Application\Core Application\bin\Debug\Core Application.pdb
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.TrustInfo.xml
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.exe.manifest
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.application
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.exe
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.pdb
+D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.csprojResolveAssemblyReference.cache

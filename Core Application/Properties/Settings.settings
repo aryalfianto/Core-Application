@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Core_Application.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">apple</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pa31597</Value>
+    </Setting>
+    <Setting Name="LinkFW" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://10.201.192.227/Aryal/Microsoft%20.NET%20Framework/</Value>
+    </Setting>
+    <Setting Name="LinkSoftware" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://10.201.192.227/Aryal/Software/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
