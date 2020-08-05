@@ -32,7 +32,7 @@ namespace Core_Application
             notifyIcon1.Visible = true;
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
-            GetFramework("v4.0", "dotNetFx40.exe");
+            GetFramework("v4.0" , "dotNetFx40.exe");
             DatalogManager("C:/Datalog_Manager", "Datalog_Manager/", "Datalog Delivery");
             IWASManager("NewAutoICTver");
             if (NET == true)
