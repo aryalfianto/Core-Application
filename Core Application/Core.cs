@@ -20,11 +20,10 @@ namespace Core_Application
     {
         public string user = Properties.Settings.Default.User;
         public string password = Properties.Settings.Default.Password;
-        public string linkfw = Properties.Settings.Default.LinkFW;
         public string linksoftware = Properties.Settings.Default.LinkSoftware;
-        public bool NET = false;
-        public bool LOG = false;
-        public bool WAS = false;
+        public string folderftpsoftware = Properties.Settings.Default.FolderFTPSoftware;
+        public string ProcessName = Properties.Settings.Default.ProcessName;
+        public string LocalDIR = Properties.Settings.Default.Localdir;
        
         public Core()
         {
@@ -32,36 +31,19 @@ namespace Core_Application
             notifyIcon1.Visible = true;
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
-            GetFramework("v4.0" , "dotNetFx40.exe");
-            DatalogManager("C:/Datalog_Manager", "Datalog_Manager/", "Datalog Delivery");
-            IWASManager("NewAutoICTver");
-            if (NET == true)
-            {
-                label1.Text = "Net Framework : OK";
-            }
-            if (LOG == true)
-            {
-                label2.Text = "Datalog Manager : OK";
-            }
+            DatalogManager(LocalDIR, folderftpsoftware, ProcessName);
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DatalogManager("C:/Datalog_Manager", "Datalog_Manager/", "Datalog Delivery");
-            IWASManager("NewAutoICTver");
-            if (NET == true)
-            {
-                label1.Text = "Net Framework : OK";
-            }
-            if (LOG == true)
-            {
-                label2.Text = "Datalog Manager : OK";
-            }
+            DatalogManager(LocalDIR, folderftpsoftware, ProcessName);
         }
+
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             notifyIcon1.Visible = true;
         }
+
         /// <summary>
         /// Auto Download dan silent install
         /// </summary>
@@ -74,38 +56,7 @@ namespace Core_Application
             DownloadFile(userdni, passworddni, linkfwdni + appnamedni, AppDomain.CurrentDomain.BaseDirectory + appnamedni);
             SilentInstal(appnamedni);
         }
-        
-        /// <summary>
-        /// Mengecek .Net Framework
-        /// </summary>
-        /// <param name="version">versi .net framework yang akan dicek</param>
-        /// <param name="filename">nama file .net framework</param>
-        void GetFramework(string version, string filename)
-        {
-            try 
-            {
-                bool NetFramework = false;
-                RegistryKey installed_versions = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\NET Framework Setup\NDP");
-                string[] version_names = installed_versions.GetSubKeyNames();
-                foreach (string ver in version_names)
-                {
-                    if (ver == version)
-                    {
-                        NetFramework = true;
-                        break;
-                    }
-                }
-                if (NetFramework != true)
-                {
-                    AutoDnI(user, password, linkfw, filename);
-                }
-                NET = true;
-            }
-            catch
-            {
-                NET = false;
-            }
-        }
+
         /// <summary>
         /// Instal Aplikasi yg ada di dalam root applikasi
         /// </summary>
@@ -120,13 +71,11 @@ namespace Core_Application
                 process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 process.Start();
                 process.WaitForExit();
-                notifyIcon1.BalloonTipText = "Installing Selesai";
-                notifyIcon1.ShowBalloonTip(500);
+                label1.Text = "Installing Selesai";
             }
             catch
             {
-                notifyIcon1.BalloonTipText = "Installing Gagal";
-                notifyIcon1.ShowBalloonTip(500);
+                label1.Text = "Installing Gagal";
             }
         }       
         /// <summary>
@@ -183,13 +132,12 @@ namespace Core_Application
                 {
                     FileInfo mFile = new FileInfo(file);
                     filelocal.Add(mFile.Name);
-                }
-                int test = filelocal.Count;
+                }   
+                List<string> linesftp = new List<string>();
                 FtpWebRequest listRequest = (FtpWebRequest)WebRequest.Create(ftpdir);
                 listRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
                 var credentials1 = new NetworkCredential(user, password);
                 listRequest.Credentials = credentials1;
-                List<string> linesftp = new List<string>();
                 //List<string> fileftp = new List<string>();
                 using (FtpWebResponse listResponse = (FtpWebResponse)listRequest.GetResponse())
                 using (Stream listStream = listResponse.GetResponseStream())
@@ -230,7 +178,8 @@ namespace Core_Application
                 
             }
             return false;
-        }
+        }  
+
         /// <summary>
         /// Memasukan File name di FTP server kedalam list
         /// </summary>
@@ -298,7 +247,7 @@ namespace Core_Application
         {
             try
             {
-                List<String> local = Directory.GetFiles(directory, "*", SearchOption.AllDirectories).ToList();
+                List<String> local = Directory.GetDirectories(directory, "*", SearchOption.AllDirectories).ToList();
                 foreach (string file in local)
                 {
                     FileInfo mFile = new FileInfo(file);
@@ -359,10 +308,6 @@ namespace Core_Application
             if (pname.Length == 0)
             {
                 RunningAplikasi(localdir);
-            }
-            if(DM == true)
-            {
-                LOG = true;
             }
         }
         /// <summary>
@@ -434,57 +379,6 @@ namespace Core_Application
                 notifyIcon1.ShowBalloonTip(500);
             }
             
-        }
-        /// <summary>
-        /// Mengecek IWAS version harus diatas 5.5.2 //NewAutoICTver5.5.2
-        /// </summary>
-        /// <param name="processname">Iwas Process Name</param>
-        void IWASManager(string processname)
-        {
-            bool newiwas = false;
-            Process[] processlist = Process.GetProcesses();
-            foreach (Process theprocess in processlist)
-            {
-              if (theprocess.ProcessName.Contains(processname))
-              {
-                  string prosname = theprocess.ProcessName;
-                  string [] version = prosname.Split('r');
-                  string[] angka = version[1].Split('.');
-                  int major = Convert.ToInt16(angka[0]);
-                  int minor = Convert.ToInt16(angka[1]);
-                  int revision = Convert.ToInt16(angka[2]);
-                  if(major == 5)
-                  {
-                      if(minor==5)
-                      {
-                          if (revision>=2)
-                          { 
-                              newiwas= true;
-                          }
-                      }
-                      if(minor>5)
-                  {
-                      newiwas = true;
-                  }
-                  }
-                  if(major >5)
-                  {
-                      newiwas = true;
-                  }
-              }
-            }
-            if (newiwas != true)
-            {
-                TutupProses(processname);
-            }
-            if (newiwas == true)
-            {
-                WAS = true;
-            }
-            if (WAS == true)
-            {
-                label3.Text = "IWAS - Version : OK";
-            }
-        }
+        } 
     }
 }

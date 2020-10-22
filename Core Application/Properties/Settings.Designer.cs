@@ -25,7 +25,7 @@ namespace Core_Application.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("apple")]
+        [global::System.Configuration.DefaultSettingValueAttribute("testlog")]
         public string User {
             get {
                 return ((string)(this["User"]));
@@ -37,7 +37,7 @@ namespace Core_Application.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("pa31597")]
+        [global::System.Configuration.DefaultSettingValueAttribute("testlog1234")]
         public string Password {
             get {
                 return ((string)(this["Password"]));
@@ -49,25 +49,49 @@ namespace Core_Application.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ftp://10.201.192.227/Aryal/Microsoft%20.NET%20Framework/")]
-        public string LinkFW {
-            get {
-                return ((string)(this["LinkFW"]));
-            }
-            set {
-                this["LinkFW"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ftp://10.201.192.227/Aryal/Software/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ftp://10.208.180.20/DataLOG_Software/")]
         public string LinkSoftware {
             get {
                 return ((string)(this["LinkSoftware"]));
             }
             set {
                 this["LinkSoftware"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Update_Log_Manager/")]
+        public string FolderFTPSoftware {
+            get {
+                return ((string)(this["FolderFTPSoftware"]));
+            }
+            set {
+                this["FolderFTPSoftware"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Log Manager")]
+        public string ProcessName {
+            get {
+                return ((string)(this["ProcessName"]));
+            }
+            set {
+                this["ProcessName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Datalog_Application")]
+        public string Localdir {
+            get {
+                return ((string)(this["Localdir"]));
+            }
+            set {
+                this["Localdir"] = value;
             }
         }
     }

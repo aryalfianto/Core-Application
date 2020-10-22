@@ -4,14 +4,14 @@
   <description asmv2:publisher="Core Application" asmv2:product="Core Application" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Core Application.exe.manifest" size="5921">
+    <dependentAssembly dependencyType="install" codebase="Core Application.exe.manifest" size="6382">
       <assemblyIdentity name="Core Application.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ytc4xza2lB/oGed9vL2HcneF/v0=</dsig:DigestValue>
+        <dsig:DigestValue>+A/xUXm2i0uEHJFqj+/8WN8mlnk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
