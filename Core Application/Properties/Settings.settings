@@ -20,5 +20,17 @@
     <Setting Name="Localdir" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Datalog_Application</Value>
     </Setting>
+    <Setting Name="Coredir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Core</Value>
+    </Setting>
+    <Setting Name="FileEXE" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Log Manager.exe</Value>
+    </Setting>
+    <Setting Name="LinkVNC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://10.208.180.20/DataLOG_Software/VNC/</Value>
+    </Setting>
+    <Setting Name="LocalVNC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Core\VNC\</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

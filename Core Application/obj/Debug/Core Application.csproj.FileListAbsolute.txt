@@ -12,4 +12,5 @@ D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Applicat
 D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.application
 D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.exe
 D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.pdb
+D:\Desktop Programming\Core Application\Core Application\bin\Debug\Interop.SHDocVw.dll
 D:\Desktop Programming\Core Application\Core Application\obj\Debug\Core Application.csprojResolveAssemblyReference.cache

@@ -53,14 +53,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Core Application.exe" size="70032">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Core Application.exe" size="70544">
       <assemblyIdentity name="Core Application" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7RAlGm7MV8ePJ5/i3AfwNtb33Xw=</dsig:DigestValue>
+        <dsig:DigestValue>WtXF4kc8x3hyFFU6ZMH07a9vJKk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -76,6 +76,30 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.IWshRuntimeLibrary.dll" size="49152">
+      <assemblyIdentity name="Interop.IWshRuntimeLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>e5cGgNJrY9wZ92RlJuqsOtISPEo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SHDocVw.dll" size="163840">
+      <assemblyIdentity name="Interop.SHDocVw" version="1.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>oK3SXVrmGVPDiBL+eohUarWWJRM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <file name="AppIcon.ico" size="16958">
     <hash>
       <dsig:Transforms>
@@ -85,13 +109,13 @@
       <dsig:DigestValue>h99qS5erywIoAInfigkmKZtJ7oE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Core Application.exe.config" size="1433">
+  <file name="Core Application.exe.config" size="1893">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>2MrLDDV7c14xwvixtTOWVb25RQQ=</dsig:DigestValue>
+      <dsig:DigestValue>DaQ8JvVglJj6fNl1t14kUnXhlEI=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

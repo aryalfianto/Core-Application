@@ -94,5 +94,53 @@ namespace Core_Application.Properties {
                 this["Localdir"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Core")]
+        public string Coredir {
+            get {
+                return ((string)(this["Coredir"]));
+            }
+            set {
+                this["Coredir"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Log Manager.exe")]
+        public string FileEXE {
+            get {
+                return ((string)(this["FileEXE"]));
+            }
+            set {
+                this["FileEXE"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ftp://10.208.180.20/DataLOG_Software/VNC/")]
+        public string LinkVNC {
+            get {
+                return ((string)(this["LinkVNC"]));
+            }
+            set {
+                this["LinkVNC"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Core\\VNC\\")]
+        public string LocalVNC {
+            get {
+                return ((string)(this["LocalVNC"]));
+            }
+            set {
+                this["LocalVNC"] = value;
+            }
+        }
     }
 }
